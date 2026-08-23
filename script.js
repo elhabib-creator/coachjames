@@ -1,4 +1,4 @@
-document.getElementById("contactForm").addEventListener("submit", function(e) {
+document.getElementById("contact").addEventListener("submit", function(e) {
     e.preventDefault();
 
     const name = this.querySelector('input[type="text"]').value;
@@ -6,13 +6,13 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     const service = this.querySelector("select").value;
     const message = this.querySelector("textarea").value;
 
-    const number = "212678309792"; // ضع رقمك
+    const number = "212678309792"; 
 
     const text =
-`👤 الاسم: ${name}
-📞 الهاتف: ${phone}
-🏋️ الخدمة: ${service}
-💬 الرسالة: ${message}`;
+`👤 name: ${name}
+📞 phone: ${phone}
+🏋️ service: ${service}
+💬 message: ${message}`;
 
     const url = `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
 
