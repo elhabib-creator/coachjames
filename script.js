@@ -6,7 +6,7 @@ document.getElementById("contact").addEventListener("submit", function(e) {
     const service = this.querySelector("select").value;
     const message = this.querySelector("textarea").value;
 
-    const number = "212678309792"; 
+    const number = "447700900077"; 
 
     const text =
 `👤 name: ${name}
