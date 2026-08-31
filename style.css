@@ -9,6 +9,7 @@ ROOT VARIABLES
 --warm-white: #F5F3EE;
 --stone: #E8E5DE;
 --muted-gold: #B49A68;
+--dark-gold: #8A7248;
 --deep-charcoal: #1C1C1C;
 --warm-gray: #6F6B63;
 --soft-gray: #D8D4CC;
@@ -18,8 +19,9 @@ ROOT VARIABLES
 --main-background: var(--warm-white);
 --secondary-background: var(--stone);
 --accent: var(--muted-gold);
+--accent-text: var(--dark-gold);
 --main-text: var(--deep-charcoal);
---seconday-text: var(--warm-gray);
+--secondary-text: var(--warm-gray);
 --borders: var(--soft-gray);
 }
 
@@ -28,16 +30,16 @@ GLOBAL RESET
 ========================= */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
   }
 
 body {
-font-family: "Manrope", sans-serif;
-background: var(--main-background);
-color: var(--main-text);
-scroll-behavior: smooth;
+	font-family: "Manrope", sans-serif;
+	background: var(--main-background);
+	color: var(--main-text);
+	scroll-behavior: smooth;
 }
 
 /* =========================
@@ -45,9 +47,84 @@ CONTAINER
 ========================= */
 
 .container {
-width: 90%;
-max-width: 1150px;
-margin: auto;
+	width: 90%;
+	max-width: 1150px;
+	margin: auto;
+}
+
+/* =========================
+DEMO BANNER
+========================= */
+
+.demo-banner {
+	background: var(--charcoal-black);
+	color: var(--warm-white);
+	padding: 10px 0;
+	text-align: center;
+	font-size: 13px;
+}
+
+.demo-banner strong {
+	color: var(--accent);
+}
+
+.demo-banner a {
+	color: var(--accent);
+	text-decoration: underline;
+	margin-left: 8px;
+	white-space: nowrap;
+}
+
+.demo-banner a:hover {
+	color: var(--warm-white);
+}
+
+/* =========================
+CASE STUDY
+============================*/
+.case-study {
+	background: var(--secondary-background);
+	border-top: 1px solid var(--borders);
+}
+
+.case-study p {
+	max-width: 700px;
+	margin: 0 auto 15px;
+	text-align: center;
+	color: var(--main-text);
+}
+
+.case-study strong {
+	color: var(--main-text);
+}
+
+.case-study a {
+	color: var(--accent);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.case-study a:hover {
+	text-decoration: underline;
+}
+
+.secondary-link {
+font-weight: 400;
+font-size: 13px;
+text-decoration: underline;
+text-underline-offset: 3px;
+opacity: 0.8;
+transition: 0.3s;
+}
+
+.secondary-link:hover {
+color: var(--accent);
+opacity: 1;
+}
+
+.cta-or {
+font-size: 13px;
+color: var(--main-text);
 }
 
 /* =========================
@@ -55,56 +132,56 @@ HEADER (Premium Glass Effect)
 ========================= */
 
 .header {
-position: sticky;
-top: 0;
-z-index: 1000;
-background: var(--secondary-background);
-backdrop-filter: blur(12px);
-border-bottom: 1px solid var(--borders);
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background: var(--secondary-background);
+	backdrop-filter: blur(12px);
+	border-bottom: 1px solid var(--borders);
 }
 
 .header .container {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 18px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 18px 0;
 }
 
 .logo {
-font-family: "Manrope", sans-serif;
-font-weight: 800;
-font-size: 22px;
-color: var(--accent);
-letter-spacing: 1px;
-text-transform: uppercase;
+	font-family: "Manrope", sans-serif;
+	font-weight: 800;
+	font-size: 22px;
+	color: var(--accent-text);
+	letter-spacing: 1px;
+	text-transform: uppercase;
 }
 
 .nav a {
-color: var(--primary-dark);
-text-decoration: none;
-margin-right: 18px;
-font-size: 14px;
-transition: 0.3s;
-position: relative;
+	color: var(--primary-dark);
+	text-decoration: none;
+	margin-right: 18px;
+	font-size: 14px;
+	transition: 0.3s;
+	position: relative;
 }
 
 .nav a::after {
-content: "";
-position: absolute;
-bottom: -5px;
-left: 0;
-width: 0;
-height: 2px;
-background: var(--accent);
-transition: 0.3s;
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: var(--accent);
+	transition: 0.3s;
 }
 
 .nav a:hover::after {
-width: 100%;
+	width: 100%;
 }
 
 .nav a:hover {
-color: var(--accent);
+	color: var(--accent);
 }
 
 /* =========================
@@ -112,59 +189,60 @@ HERO (Strong Impact Section)
 ========================= */
 
 .hero {
-height: 100vh;
-display: flex;
-align-items: center;
-text-align: center;
-position: relative;
-background: url("assets/images/gym.webp") center/cover no-repeat;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	background: url("assets/images/gym.webp") center/cover no-repeat;
 }
 
 .hero::before {
-content: "";
-position: absolute;
-inset: 0;
-background: radial-gradient(circle at center, rgba(245, 243, 238,0.4), var(--secondary-dark));
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle at center, rgba(245, 243, 238,0.4), var(--secondary-dark));
 }
 
 .hero .container {
-position: relative;
-z-index: 2;
+	position: relative;
+	z-index: 2;
 }
 
 .hero h1 {
-font-family: "Manrope", sans-serif;
-font-size: 52px;
-font-weight: 800;
-text-transform: uppercase;
-margin-bottom: 15px;
-letter-spacing: 1px;
-backdrop-filter: blur(4px);
+	font-family: "Manrope", sans-serif;
+	font-size: 52px;
+	font-weight: 800;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	letter-spacing: 1px;
+	backdrop-filter: blur(4px);
 }
 
 .hero p {
-color: var(--main-text);
-font-size: 18px;
-margin-bottom: 25px;
-backdrop-filter: blur(4px);
+	color: var(--main-text);
+	font-size: 18px;
+	margin-bottom: 25px;
+	backdrop-filter: blur(4px);
 }
 
 /* CTA Button */
 .btn {
-display: inline-block;
-padding: 14px 30px;
-background: var(--accent);
-color: white;
-font-weight: 700;
-text-decoration: none;
-border-radius: 6px;
-transition: 0.3s;
-box-shadow: 0 10px 30px rgba(255,45,45,0.25);
+	display: inline-block;
+	padding: 14px 30px;
+	background: var(--accent);
+	color: var(--primary-darck);
+	font-weight: 700;
+	text-decoration: none;
+	border-radius: 6px;
+	transition: 0.3s;
+	box-shadow: 0 10px 30px rgba(255,45,45,0.25);
 }
 
 .btn:hover {
-background: var(--primary-dark);
-transform: translateY(-2px);
+	background: var(--primary-dark);
+	color: var(--warm-white);
+	transform: translateY(-2px);
 }
 
 /* =========================
@@ -172,25 +250,25 @@ SECTIONS
 ========================= */
 
 section {
-padding: 90px 0;
+	padding: 90px 0;
 }
 
 h2 {
-text-align: center;
-font-family: "Manrope", sans-serif;
-font-size: 34px;
-margin-bottom: 50px;
-color: var(--main-text);
-position: relative;
+	text-align: center;
+	font-family: "Manrope", sans-serif;
+	font-size: 34px;
+	margin-bottom: 50px;
+	color: var(--main-text);
+	position: relative;
 }
 
 h2::after {
-content: "";
-display: block;
-width: 60px;
-height: 3px;
-background: var(--accent);
-margin: 10px auto 0;
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	background: var(--accent);
+	margin: 10px auto 0;
 }
 
 /* =========================
@@ -198,38 +276,38 @@ SERVICES (Hover Lift Cards)
 ========================= */
 
 .service-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 25px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 25px;
 }
 
 .service-card {
-background: linear-gradient(145deg, var(--secondary-background), var(--secondary-background));
-padding: 25px;
-border-radius: 12px;
-border: 1px solid var(--borders);
-text-align: center;
-transition: 0.3s ease;
-position: relative;
-overflow: hidden;
+	background: linear-gradient(145deg, var(--secondary-background), var(--secondary-background));
+	padding: 25px;
+	border-radius: 12px;
+	border: 1px solid var(--borders);
+	text-align: center;
+	transition: 0.3s ease;
+	position: relative;
+	overflow: hidden;
 }
 
 .service-card::before {
-content: "";
-position: absolute;
-inset: 0;
-background: radial-gradient(circle at top, color-mix(in srgb, var(--accent) 35%, transparent), transparent);
-opacity: 0;
-transition: 0.3s;
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle at top, color-mix(in srgb, var(--accent) 35%, transparent), transparent);
+	opacity: 0;
+	transition: 0.3s;
 }
 
 .service-card:hover {
-transform: translateY(-8px);
-border-color: var(--accent);
+	transform: translateY(-8px);
+	border-color: var(--accent);
 }
 
 .service-card:hover::before {
-opacity: 1;
+	opacity: 1;
 }
 
 /* =========================
@@ -237,30 +315,30 @@ PRICING
 ========================= */
 
 .pricing-table {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 20px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
 }
 
 .price-item {
-background: var(--secondary-background);
-padding: 25px;
-border-radius: 12px;
-border: 1px solid var(--borders);
-text-align: center;
-transition: 0.3s;
+	background: var(--secondary-background);
+	padding: 25px;
+	border-radius: 12px;
+	border: 1px solid var(--borders);
+	text-align: center;
+	transition: 0.3s;
 }
 
 .price-item:hover {
-transform: scale(1.05);
-border-color: var(--accent);
+	transform: scale(1.05);
+	border-color: var(--accent);
 }
 
 .price-item p {
-font-size: 22px;
-color: var(--accent);
-margin-top: 10px;
-font-weight: bold;
+	font-size: 22px;
+	color: var(--accent-text);
+	margin-top: 10px;
+	font-weight: bold;
 }
 
 /* =========================
@@ -268,21 +346,21 @@ TESTIMONIALS
 ========================= */
 
 .testimonial-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 25px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 25px;
 }
 
 .testimonial {
-background: var(--secondary-background);
-padding: 25px;
-border-radius: 12px;
-border-left: 3px solid var(--accent);
-position: relative;
+	background: var(--secondary-background);
+	padding: 25px;
+	border-radius: 12px;
+	border-left: 3px solid var(--accent);
+	position: relative;
 }
 
 .testimonial p {
-color: var(--muted);
+	color: var(--main-text);
 }
 
 /* =========================
@@ -290,45 +368,54 @@ CONTACT
 ========================= */
 
 .contact form {
-max-width: 550px;
-margin: auto;
-display: flex;
-flex-direction: column;
-gap: 15px;
+	max-width: 550px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
 }
 
 .contact input,
 .contact select,
 .contact textarea {
-padding: 14px;
-background: var(--secondary-background);
-border: 1px solid var(--borders);
-border-radius: 8px;
-color: var(--main-text);
-outline: none;
-transition: 0.3s;
+	padding: 14px;
+	background: var(--secondary-background);
+	border: 1px solid var(--borders);
+	border-radius: 8px;
+	color: var(--main-text);
+	outline: none;
+	transition: 0.3s;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	white-space: nowrap;
 }
 
 .contact input:focus,
 .contact textarea:focus {
-border-color: var(--borders);
-box-shadow: 0 0 10px rgba(255,45,45,0.2);
+	border-color: var(--borders);
+	box-shadow: 0 0 10px rgba(255,45,45,0.2);
 }
 
 .contact button {
-padding: 14px;
-background: var(--accent);
-border: none;
-color: var(--main-text);
-font-weight: bold;
-cursor: pointer;
-border-radius: 8px;
-transition: 0.3s;
+	padding: 14px;
+	background: var(--accent);
+	border: none;
+	color: var(--main-text);
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 8px;
+	transition: 0.3s;
 }
 
 .contact button:hover {
-background: var(--primary-dark);
-color: var(--accent);
+	background: var(--primary-dark);
+	color: var(--accent);
 }
 
 .contact .social img:hover {
@@ -340,15 +427,15 @@ SOCIAL
 ========================= */
 
 .social {
-text-align: center;
-margin-top: 25px;
+	text-align: center;
+	margin-top: 25px;
 }
 
 .social a {
-color: var(--accent);
-margin: 0 12px;
-text-decoration: none;
-font-weight: bold;
+	color: var(--accent);
+	margin: 0 12px;
+	text-decoration: none;
+	font-weight: bold;
 }
 
 /* =========================
@@ -356,11 +443,11 @@ FOOTER
 ========================= */
 
 .footer {
-text-align: center;
-padding: 25px;
-border-top: 1px solid var(--borders);
-color: #666;
-font-size: 14px;
+	text-align: center;
+	padding: 25px;
+	border-top: 1px solid var(--borders);
+	color: var(--main-text);
+	font-size: 14px;
 }
 
 /* =========================
@@ -371,15 +458,15 @@ RESPONSIVE
 .service-grid,
 .pricing-table,
 .testimonial-grid {
-grid-template-columns: 1fr;
+	grid-template-columns: 1fr;
 }
 
 .hero h1 {
-    font-size: 34px;
+	font-size: 34px;
 }
 
 .nav {
-    display: none;
+	display: none;
 }
 
 

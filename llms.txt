@@ -1,0 +1,12 @@
+# James Carter Portfolio — SEO & Frontend Demo
+
+> A fictional personal trainer landing page built by El Habib H. to demonstrate frontend development and technical SEO skills. James Carter is not a real person or business.
+
+## Pages
+
+- [Homepage](https://coachjames.pages.dev/): Main landing page showcasing responsive design, on-page SEO, and structured content.
+
+## About the Developer
+
+- [Upwork Profile](https://www.upwork.com/freelancers/~01af3ead7831321b86): Hire El Habib H. for frontend development and landing pages.
+- [GitHub Repository](https://github.com/elhabib-creator/coachjames.git): Full source code of this project.

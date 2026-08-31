@@ -30,6 +30,17 @@
 </head>
 
 <body>
+
+<!-- ==================Demo Banner============== -->
+<div class="demo-banner">
+	<div class="container">
+		<p>
+		🔧 This is a demo project by <strong>El Habib H.</strong> — James Carter is a fictional persona used to showcase frontend development &amp; SEO skills.
+		<a href="https://www.upwork.com/freelancers/~01af3ead7831321b86" target="_blank">Hire me on Upwork →</a>
+		</p>
+	</div>
+</div>
+
 <!-- ================= HEADER ================= -->
 <header class="header">
 <div class="container">
@@ -158,7 +169,8 @@
             <input type="text" placeholder="the name" required />
             <input type="tel" placeholder="phone number" required />
 
-            <select required>
+	    <label for="service-select" class="visually-hidden">Choose the service</label>
+            <select id="service-select" required>
                 <option value="">Choose the service</option>
                 <option value="1-to-1 Personal Training">1-to-1 Personal Training</option>
                 <option value="Personalized Training Programs">Personalized Training Programs</option>
@@ -173,17 +185,28 @@
         </form>
 
         <div class="social">
-            <a href="#" target="_blank">
-		    <img alt="Instagram" src="./assets/icons/instagram.svg" style="width: 2rem; height: auto">
-            </a>
-
-            <a href="#" target="_blank">
-		    <img alt="WhatsApp" src="./assets/icons/whatsapp.svg" style="width: 2rem; height: auto">
-            </a>
+		<img alt="Instagram icon (decorative)" src="./assets/icons/instagram.svg" width="32" height="32" style="width: 2rem; height: auto; opacity: 0.6">
+		<img alt="WhatsApp icon (decorative)" src="./assets/icons/whatsapp.svg" width="32" height="32" style="width: 2rem; height: auto; opacity: 0.6">
         </div>
     </div>
 </section>
 </main>
+
+<!-- =================Case Study=============== -->
+<section id="case-study" class="case-study">
+	<div class="container">
+		<h2>About This Project — by El Habib H.</h2>
+		<p>
+		This website is a fictional portfolio piece built by <strong>El Habib H.</strong>, a frontend developer who builds responsive landing pages and busines websites with HTML, CSS, and JavaScript. James Carter does not exist — this project demonstrates real, hands-on skills: clean semantic markup, fast-loading responsive layouts, and on-page technical SEO (structured data, meta targeting, Core Web Vitals optimization).
+		</p>
+		<p>
+		Need a modern landing page or business website for your brand?
+          	<a href="https://www.upwork.com/freelancers/~01af3ead7831321b86" target="_blank">Hire me on Upwork</a>
+		<br class="cta-break">
+		<span class="cta-or">or</span> <a href="https://github.com/elhabib-creator/coachjames.git" target="_blank" class="secondary-link">see the code on GitHub</a>.
+		</p>
+	</div>
+</section>
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
