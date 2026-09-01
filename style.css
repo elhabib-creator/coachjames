@@ -107,7 +107,7 @@ CASE STUDY
 }
 
 .case-study a {
-	color: var(--accent);
+	color: var(--accent-text);
 	font-weight: 600;
 	text-decoration: none;
 }
@@ -121,12 +121,12 @@ font-weight: 400;
 font-size: 13px;
 text-decoration: underline;
 text-underline-offset: 3px;
-opacity: 0.8;
+opacity: 1;
 transition: 0.3s;
 }
 
 .secondary-link:hover {
-color: var(--accent);
+color: var(--accent-text);
 opacity: 1;
 }
 
